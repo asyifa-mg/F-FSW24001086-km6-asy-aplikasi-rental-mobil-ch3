@@ -3,10 +3,6 @@ const fs = require("fs");
 //Membaca file JSON
 const cars = JSON.parse(fs.readFileSync(`${__dirname}/../data/dummy.json`));
 
-const defaultRouter = (req, res, next) => {
-  res.send("<p>ping successfully</p>");
-};
-
 const getCarsData = (req, res, next) => {
   console.log(req.requestTime);
   res.status(200).json({
@@ -108,7 +104,6 @@ const deleteCars = (req, res, next) => {
 };
 
 module.exports = {
-  defaultRouter,
   getCarsData,
   getCarsById,
   updateCars,

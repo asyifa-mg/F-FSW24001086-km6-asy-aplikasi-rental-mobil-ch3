@@ -4,7 +4,6 @@ const morgan = require("morgan");
 const app = express();
 
 const carRouter = require("./routes/carRoutes");
-const { defaultRouter } = require("./controllers/carController");
 
 //middelware untuk membaca JSON dari request body ke kita
 app.use(express.json());
@@ -17,7 +16,5 @@ app.use((req, res, next) => {
 });
 
 app.use("/cars", carRouter);
-
-app.use("/", defaultRouter);
 
 module.exports = app;
