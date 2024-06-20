@@ -2,7 +2,7 @@ const app = require("./app");
 const PORT = 8000;
 
 app.get("/", (req, res) => {
-  res.send("Ping successful");
+  res.send("ping successfully");
 });
 
 app.listen(PORT, () => {
